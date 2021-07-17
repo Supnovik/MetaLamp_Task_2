@@ -1,0 +1,95 @@
+.DropDown {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  .Visitors {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 320px;
+    height: 44px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.75);
+    padding-left: 14px;
+    padding-right: 15px;
+    &:focus,
+    &:hover {
+      border: 1px solid rgba(31, 32, 65, 0.5);
+      outline-width: 0;
+    }
+    img {
+      user-select: none;
+    }
+  }
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    div:nth-child(1) {
+      font-size: 12px;
+      line-height: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    div:nth-child(2) {
+      font-size: 12px;
+      line-height: 15px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: rgba(31, 32, 65, 0.5);
+    }
+  }
+
+  .guest-list {
+    height: 159px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.75);
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1f2041;
+    .guest-list-adults {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      > div {
+        display: flex;
+        align-items: center;
+        .minus,
+        .plus {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 30px;
+          height: 30px;
+          color: #1f2041;
+          cursor: pointer;
+          border: 1px solid;
+          border-color: #1f2041;
+          opacity: 0.25;
+          border-radius: 22px;
+          margin: 10px;
+          &.clicked {
+            color: #1f2041;
+            border-color: #1f2041;
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.TextField {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  input {
+    width: 320px;
+    height: 44px;
+    left: 141px;
+    top: 163px;
+    background: #ffffff;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.75);
+    padding-left: 12px;
+    &:focus,
+    &:hover {
+      border: 1px solid rgba(31, 32, 65, 0.5);
+      outline-width: 0;
+    }
+  }
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    div:nth-child(1) {
+      font-size: 12px;
+      line-height: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    div:nth-child(2) {
+      font-size: 12px;
+      line-height: 15px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: rgba(31, 32, 65, 0.5);
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.App {
+  .logo {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 28px;
+    top: 28px;
+  }
+}
+.Page {
+  display: flex;
+  flex-direction: column;
+  margin-top: 142px;
+  margin-left: 137px;
+}

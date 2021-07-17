@@ -1,10 +1,17 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
+import logo from "./img/Group.png";
+import "./App.scss";
+import TextField from "./Components/TextField/TextField";
+import DropDown from "./Components/DropDown/DropDown";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header"></header>
+      <img src={logo} alt="" className="logo" />
+      <div className="Page">
+        <DropDown />
+        <TextField />
+      </div>
     </div>
   );
 }

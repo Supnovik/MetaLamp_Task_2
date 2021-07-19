@@ -5,16 +5,31 @@ import arrowAct from "../../img/arrow-down-act.png";
 
 function DropDown() {
   var [isActive, setIsActive] = useState(false);
-  var [clicked, setClicked] = useState("");
+  var [people, setPeople] = useState([
+    { name: "Взрослые", count: 0 },
+    { name: "Дети", count: 0 },
+    { name: "Младенцы", count: 0 },
+  ]);
 
-  function Activate() {
-    setIsActive((isActive = !isActive));
+  function add(index) {
+    let newArr = people.map((item, i) => {
+      if (index === i) {
+        return { ...item, count: item.count + 1 };
+      } else {
+        return item;
+      }
+    });
+    setPeople(newArr);
   }
-
-  function Click() {
-    if (clicked === "") {
-      setClicked("clicked");
-    }
+  function sub(index) {
+    let newArr = people.map((item, i) => {
+      if (index === i) {
+        return { ...item, count: item.count - 1 };
+      } else {
+        return item;
+      }
+    });
+    setPeople(newArr);
   }
 
   return (
@@ -24,7 +39,10 @@ function DropDown() {
         <div></div>
       </div>
       <form>
-        <div className="Visitors" onClick={() => Activate()}>
+        <div
+          className="Visitors"
+          onClick={() => setIsActive((isActive = !isActive))}
+        >
           Сколько гостей{" "}
           {isActive ? (
             <img src={arrowAct} alt="&#8744;" />
@@ -32,44 +50,33 @@ function DropDown() {
             <img src={arrow} alt="&#8744;" />
           )}
         </div>
+
         {isActive ? (
           <div className="guest-list">
-            <div className="guest-list-adults">
-              Взрослые{" "}
-              <div>
-                <div className={"minus " + clicked} onClick={() => Click()}>
-                  -
+            {people.map((item, index) => {
+              return (
+                <div className="guest-list-adults" key={item.name}>
+                  {item.name}
+                  <div>
+                    {item.count === 0 ? (
+                      <div className={"minus"}>-</div>
+                    ) : (
+                      <div
+                        className={"minus clicked"}
+                        onClick={() => sub(index)}
+                      >
+                        -
+                      </div>
+                    )}
+
+                    <div className="count ">{item.count}</div>
+                    <div className="plus clicked" onClick={() => add(index)}>
+                      +
+                    </div>
+                  </div>
                 </div>
-                <div className="count ">чис</div>
-                <div className="plus clicked" onClick={() => Click()}>
-                  +
-                </div>
-              </div>
-            </div>
-            <div className="guest-list-adults">
-              Дети
-              <div>
-                <div className={"minus " + clicked} onClick={() => Click()}>
-                  -
-                </div>
-                <div className="count ">чис</div>
-                <div className="plus clicked" onClick={() => Click()}>
-                  +
-                </div>
-              </div>
-            </div>
-            <div className="guest-list-adults">
-              Младенцы
-              <div>
-                <div className={"minus " + clicked} onClick={() => Click()}>
-                  -
-                </div>
-                <div className="count ">чис</div>
-                <div className="plus clicked" onClick={() => Click()}>
-                  +
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         ) : (
           <div></div>

@@ -1,34 +1,6 @@
 .Checkbox {
-  .custom-checkbox {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-  }
-  .custom-checkbox + span {
-    display: inline-flex;
-    align-items: center;
-    user-select: none;
-  }
-  .custom-checkbox + span::before {
-    content: "";
-    width: 20px;
-    height: 20px;
-
-    background: #ffffff;
-    /* Dark 25% */
-
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    box-sizing: border-box;
-    border-radius: 4px;
-  }
-  .custom-checkbox:checked + span::before {
-    background-image: url("../../img/Vector.png");
-    background-repeat: no-repeat;
-    background-position: center;
-
-    // background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
-  }
-
+  width: 320px;
+  margin: 20px 0 20px 0;
   > div {
     display: flex;
     justify-content: space-between;
@@ -52,4 +24,36 @@
 .check-list {
   display: flex;
   flex-direction: column;
+
+  .checkbox {
+    display: none;
+  }
+  .checkbox + span {
+    display: inline-flex;
+    align-items: flex-start;
+    width: 240px;
+    margin: 5px 0 5px 0;
+    user-select: none;
+    font-size: 14px;
+    color: rgba(31, 32, 65, 0.5);
+  }
+  .checkbox + span::before {
+    content: "";
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding-right: 15px;
+  }
+  .checkbox + .checked::before {
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    background-image: url("../../img/Vector.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }

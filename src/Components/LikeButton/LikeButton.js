@@ -1,20 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./LikeButton.scss";
 
-function LikeButton() {
+function LikeButton({ likeCount }) {
+  var [number, setNumber] = useState(likeCount);
+  var [clicked, setClicked] = useState(false);
+  function click() {
+    setClicked((clicked = !clicked));
+    if (clicked === true) setNumber(likeCount + 1);
+    else setNumber(likeCount);
+  }
+
   return (
     <div className="LikeButton">
       <div>
         <div>Like Button</div>
-        <div></div>
       </div>
       <form action="none">
-        <label className="checkbox">
+        <label>
           <input type="checkbox"></input>
-          <span>
-            <div className="checkbox-circle" />
-            Получать спецпредложения
-          </span>
+          <div className="container" onClick={() => click()}>
+            <span>{number}</span>
+          </div>
         </label>
       </form>
     </div>

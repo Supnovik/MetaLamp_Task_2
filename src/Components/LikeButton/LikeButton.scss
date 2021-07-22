@@ -12,54 +12,76 @@
     }
   }
 
-  .checkbox {
-    input {
-      display: none;
-    }
+  .container {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 10px;
+    user-select: none;
+    cursor: pointer;
     span {
-      display: inline-flex;
-      align-items: flex-start;
-      width: 270px;
-      margin: 5px 0 5px 0;
-      user-select: none;
-      font-size: 14px;
-      color: rgba(31, 32, 65, 0.5);
-    }
-    span:before {
-      content: "";
-      cursor: pointer;
-      padding-right: 40px;
-      margin-right: 10px;
-      width: 40px;
-      height: 20px;
-      border: 1px solid rgba(31, 32, 65, 0.25);
-      box-sizing: border-box;
-      border-radius: 10px;
-      transition: 0.5s ease-in-out;
-    }
-    &-circle {
       position: absolute;
-      bottom: 9px;
-      left: 4px;
-      width: 12px;
-      height: 12px;
-      background: rgba(31, 32, 65, 0.25);
-      border-radius: 10px;
-      transition: all 0.5s cubic-bezier(0.2, 0.85, 0.32, 1.2);
-    }
-
-    input:checked ~ span {
+      top: 3px;
+      left: 22px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 12px;
+      color: rgba(31, 32, 65, 0.25);
       &::before {
-        transition: all 0.5s cubic-bezier(0.2, 0.85, 0.32, 1.2);
-
-        border: 1px solid #bc9cff;
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: -17px;
+        width: 10px;
+        height: 8px;
+        transition: 0.5s ease-in-out;
+        background-image: url("../../img/heart.svg");
       }
-      .checkbox-circle {
-        transition: all 0.5s cubic-bezier(0.2, 0.85, 0.32, 1.2);
-
-        transform: translateX(22px);
-        background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    }
+  }
+  input {
+    display: none;
+    &:checked {
+      ~ .container {
+        border: 1px solid #bc9cff;
+        span {
+          color: #bc9cff;
+          &::before {
+            background-image: url("../../img/heart-act.svg");
+          }
+        }
       }
     }
   }
 }
+/*
+
+&-circle {
+  position: absolute;
+  bottom: 9px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background: rgba(31, 32, 65, 0.25);
+  border-radius: 10px;
+  transition: all 0.5s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+}
+
+input:checked ~ span {
+  &::before {
+    transition: all 0.5s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+
+    border: 1px solid #bc9cff;
+  }
+  .checkbox-circle {
+    transition: all 0.5s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+
+    transform: translateX(22px);
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  }
+}
+*/

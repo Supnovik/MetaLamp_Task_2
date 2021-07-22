@@ -1,4 +1,5 @@
 import React from "react";
+
 import logo from "./img/Group.png";
 import "./App.scss";
 import TextField from "./Components/TextField/TextField";
@@ -14,7 +15,7 @@ function App() {
     <div className="App">
       <img src={logo} alt="" className="logo" />
       <div className="Page">
-        <LikeButton />
+        <LikeButton likeCount={12} />
         <Toggle />
         <Subscription />
         <RadioButtons />

@@ -6,7 +6,6 @@ function Toggle() {
     <div className="Toggle">
       <div>
         <div>Toggle</div>
-        <div></div>
       </div>
       <form action="none">
         <label className="checkbox">

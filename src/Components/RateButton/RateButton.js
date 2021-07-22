@@ -6,7 +6,6 @@ function RateButton() {
   var lastclicked = useRef(-1);
   function activate(n) {
     let newArr = ["", "", "", "", ""];
-
     if (lastclicked.current !== n) {
       newArr = activated.map((item, i) => {
         if (i + 1 <= n) {

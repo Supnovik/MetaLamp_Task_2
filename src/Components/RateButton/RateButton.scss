@@ -1,0 +1,41 @@
+.RateButton {
+  position: relative;
+  margin: 20px 0 20px 0;
+  width: 120px;
+  > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    div:nth-child(1) {
+      font-size: 12px;
+      line-height: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.stars {
+  transform: rotateY(180deg) translatex(4px);
+  div {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    background-image: url("../../img/star_border.svg");
+    background-repeat: no-repeat;
+  }
+
+  .star-1:hover,
+  .star-2:hover,
+  .star-3:hover,
+  .star-4:hover,
+  .star-5:hover {
+    background-image: url("../../img/star.svg");
+    ~ * {
+      background-image: url("../../img/star.svg");
+    }
+  }
+  .active {
+    background-image: url("../../img/star.svg");
+  }
+}

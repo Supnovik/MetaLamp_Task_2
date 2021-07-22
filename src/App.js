@@ -9,12 +9,14 @@ import RadioButtons from "./Components/Radio buttons/RadioButtons";
 import Subscription from "./Components/Subscription/Subscription";
 import Toggle from "./Components/Toggle/Toggle";
 import LikeButton from "./Components/LikeButton/LikeButton";
+import RateButton from "./Components/RateButton/RateButton";
 
 function App() {
   return (
     <div className="App">
       <img src={logo} alt="" className="logo" />
       <div className="Page">
+        <RateButton />
         <LikeButton likeCount={12} />
         <Toggle />
         <Subscription />

@@ -1,12 +1,16 @@
-.TextField {
+.MaskedTextField {
   margin: 20px 0 20px 0;
   display: flex;
   flex-direction: column;
   width: 320px;
-  position: relative;
+
   input {
+    cursor: text;
+    position: relative;
+    text-transform: uppercase;
     width: 320px;
     height: 44px;
+
     border: 1px solid rgba(31, 32, 65, 0.25);
     box-sizing: border-box;
     border-radius: 4px;
@@ -19,6 +23,16 @@
     &:hover {
       border: 1px solid rgba(31, 32, 65, 0.5);
       outline-width: 0;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 99;
+      top: 1px;
+      right: 1px;
+      width: 30px;
+      height: 30px;
+      background-color: white;
     }
   }
 

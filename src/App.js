@@ -11,12 +11,14 @@ import Toggle from "./Components/Toggle/Toggle";
 import LikeButton from "./Components/LikeButton/LikeButton";
 import RateButton from "./Components/RateButton/RateButton";
 import Buttons from "./Components/Buttons/Buttons";
+import MaskedTextField from "./Components/MaskedTextField/MaskedTextField";
 
 function App() {
   return (
     <div className="App">
       <img src={logo} alt="" className="logo" />
       <div className="Page">
+        <MaskedTextField />
         <Buttons Type="full" />
         <RateButton />
         <LikeButton likeCount={12} />

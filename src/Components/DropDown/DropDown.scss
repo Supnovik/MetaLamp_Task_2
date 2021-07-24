@@ -1,10 +1,7 @@
 .DropDown {
-  margin: 20px 0 20px 0;
-
   display: flex;
   flex-direction: column;
   width: 320px;
-
   .Visitors {
     user-select: none;
 
@@ -22,22 +19,13 @@
     color: rgba(31, 32, 65, 0.75);
     padding-left: 14px;
     padding-right: 15px;
+    img {
+      cursor: pointer;
+    }
     &:focus,
     &:hover {
       border: 1px solid rgba(31, 32, 65, 0.5);
       outline-width: 0;
-    }
-  }
-
-  > div {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 4px;
-    div:nth-child(1) {
-      font-size: 12px;
-      line-height: 15px;
-      font-weight: 700;
-      text-transform: uppercase;
     }
   }
 

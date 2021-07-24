@@ -4,12 +4,8 @@ import "./RangeSlider.scss";
 function RangeSlider() {
   return (
     <div className="RangeSlider">
-      <div>
-        <div>Range Slider</div>
-      </div>
-      <form action="none">
-        <input type="range" />
-      </form>
+      <input min="500" max="50000" step="500" type="range" />
+      <input min="500" max="50000" step="500" type="range" />
     </div>
   );
 }

@@ -1,17 +1,5 @@
 .LikeButton {
   position: relative;
-  margin: 20px 0 20px 0;
-  > div {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
-    div:nth-child(1) {
-      font-size: 12px;
-      line-height: 15px;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-  }
 
   .container {
     display: inline-block;
@@ -59,30 +47,3 @@
     }
   }
 }
-/*
-
-&-circle {
-  position: absolute;
-  bottom: 9px;
-  left: 4px;
-  width: 12px;
-  height: 12px;
-  background: rgba(31, 32, 65, 0.25);
-  border-radius: 10px;
-  transition: all 0.5s cubic-bezier(0.2, 0.85, 0.32, 1.2);
-}
-
-input:checked ~ span {
-  &::before {
-    transition: all 0.5s cubic-bezier(0.2, 0.85, 0.32, 1.2);
-
-    border: 1px solid #bc9cff;
-  }
-  .checkbox-circle {
-    transition: all 0.5s cubic-bezier(0.2, 0.85, 0.32, 1.2);
-
-    transform: translateX(22px);
-    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  }
-}
-*/

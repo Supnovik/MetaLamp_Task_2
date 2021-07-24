@@ -34,54 +34,44 @@ function DropDown() {
 
   return (
     <div className="DropDown">
-      <div>
-        <div>Dropdown </div>
-        <div></div>
-      </div>
-      <form>
-        <div
-          className="Visitors"
-          onClick={() => setIsActive((isActive = !isActive))}
-        >
-          Сколько гостей{" "}
-          {isActive ? (
-            <img src={arrowAct} alt="&#8744;" />
-          ) : (
-            <img src={arrow} alt="&#8744;" />
-          )}
-        </div>
-
+      <div
+        className="Visitors"
+        onClick={() => setIsActive((isActive = !isActive))}
+      >
+        Сколько гостей{" "}
         {isActive ? (
-          <div className="guest-list">
-            {people.map((item, index) => {
-              return (
-                <div className="guest-list-adults" key={item.name}>
-                  {item.name}
-                  <div>
-                    {item.count === 0 ? (
-                      <div className={"minus"}>-</div>
-                    ) : (
-                      <div
-                        className={"minus clicked"}
-                        onClick={() => sub(index)}
-                      >
-                        -
-                      </div>
-                    )}
-
-                    <div className="count ">{item.count}</div>
-                    <div className="plus clicked" onClick={() => add(index)}>
-                      +
+          <img src={arrowAct} alt="&#8744;" />
+        ) : (
+          <img src={arrow} alt="&#8744;" />
+        )}
+      </div>
+      {isActive ? (
+        <div className="guest-list">
+          {people.map((item, index) => {
+            return (
+              <div className="guest-list-adults" key={item.name}>
+                {item.name}
+                <div>
+                  {item.count === 0 ? (
+                    <div className={"minus"}>-</div>
+                  ) : (
+                    <div className={"minus clicked"} onClick={() => sub(index)}>
+                      -
                     </div>
+                  )}
+
+                  <div className="count ">{item.count}</div>
+                  <div className="plus clicked" onClick={() => add(index)}>
+                    +
                   </div>
                 </div>
-              );
-            })}
-          </div>
-        ) : (
-          <div></div>
-        )}
-      </form>
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+        <div></div>
+      )}
     </div>
   );
 }

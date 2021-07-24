@@ -19,4 +19,48 @@
   margin-top: 142px;
   margin-left: 137px;
   margin-right: 137px;
+  * {
+    h1 {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 29px;
+      color: #000000;
+    }
+    h2 {
+      font-weight: bold;
+      font-size: 19px;
+      line-height: 23px;
+      color: #000000;
+    }
+    h3 {
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: #000000;
+    }
+    p {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      color: rgba(0, 0, 0, 0.75);
+    }
+  }
+  > div {
+    margin: 10px 0 10px 0;
+  }
+}
+
+.text-field {
+  display: inline-flex;
+  width: 320px;
+  justify-content: space-between;
+  align-items: center;
+  p {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    opacity: 0.5;
+  }
 }

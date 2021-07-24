@@ -12,17 +12,12 @@ function LikeButton({ likeCount }) {
 
   return (
     <div className="LikeButton">
-      <div>
-        <div>Like Button</div>
-      </div>
-      <form action="none">
-        <label>
-          <input type="checkbox"></input>
-          <div className="container" onClick={() => click()}>
-            <span>{number}</span>
-          </div>
-        </label>
-      </form>
+      <label>
+        <input type="checkbox"></input>
+        <div className="container" onClick={() => click()}>
+          <span>{number}</span>
+        </div>
+      </label>
     </div>
   );
 }

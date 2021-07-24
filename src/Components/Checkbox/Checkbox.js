@@ -19,38 +19,32 @@ function Checkbox() {
   }
 
   return (
-    <div className="Checkbox">
-      <div>
-        <div>Checkbox buttons</div>
-        <div></div>
-      </div>
-      <form action="none" className="check-list">
-        {checkList.map((item, index) => {
-          return (
-            <label key={item.name}>
-              <input type="checkbox" className="checkbox" />
-              {item.checked ? (
-                <span
-                  className="checked"
-                  onClick={() => {
-                    Change(index);
-                  }}
-                >
-                  {item.name}
-                </span>
-              ) : (
-                <span
-                  onClick={() => {
-                    Change(index);
-                  }}
-                >
-                  {item.name}
-                </span>
-              )}
-            </label>
-          );
-        })}
-      </form>
+    <div action="none" className="check-list">
+      {checkList.map((item, index) => {
+        return (
+          <label key={item.name}>
+            <input type="checkbox" className="checkbox" />
+            {item.checked ? (
+              <span
+                className="checked"
+                onClick={() => {
+                  Change(index);
+                }}
+              >
+                {item.name}
+              </span>
+            ) : (
+              <span
+                onClick={() => {
+                  Change(index);
+                }}
+              >
+                {item.name}
+              </span>
+            )}
+          </label>
+        );
+      })}
     </div>
   );
 }

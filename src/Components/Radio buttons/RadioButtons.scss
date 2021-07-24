@@ -1,20 +1,4 @@
 .RadioButtons {
-  width: 320px;
-  margin: 20px 0 20px 0;
-  > div {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 16px;
-    div:nth-child(1) {
-      font-size: 12px;
-      line-height: 15px;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-  }
-}
-
-.radio-buttons {
   display: flex;
   input {
     display: none;

@@ -1,63 +1,49 @@
-.Toggle {
+.checkbox {
   position: relative;
-  > div {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
-    div:nth-child(1) {
-      font-size: 12px;
-      line-height: 15px;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
+  input {
+    display: none;
+  }
+  span {
+    display: inline-flex;
+    align-items: flex-start;
+    width: 270px;
+    margin: 5px 0 5px 0;
+    user-select: none;
+    font-size: 14px;
+    color: rgba(31, 32, 65, 0.5);
   }
 
-  .checkbox {
-    input {
-      display: none;
-    }
-    span {
-      display: inline-flex;
-      align-items: flex-start;
-      width: 270px;
-      margin: 5px 0 5px 0;
-      user-select: none;
-      font-size: 14px;
-      color: rgba(31, 32, 65, 0.5);
-    }
+  span:before {
+    content: "";
+    cursor: pointer;
+    padding-right: 40px;
+    margin-right: 10px;
+    width: 40px;
+    height: 20px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  &-circle {
+    position: absolute;
+    bottom: 9px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    background: rgba(31, 32, 65, 0.25);
+    border-radius: 10px;
+  }
 
-    span:before {
-      content: "";
-      cursor: pointer;
-      padding-right: 40px;
-      margin-right: 10px;
-      width: 40px;
-      height: 20px;
-      border: 1px solid rgba(31, 32, 65, 0.25);
-      box-sizing: border-box;
-      border-radius: 10px;
+  input:checked ~ span {
+    &::before {
+      border: 1px solid #bc9cff;
     }
-    &-circle {
-      position: absolute;
-      bottom: 9px;
-      left: 4px;
-      width: 12px;
-      height: 12px;
-      background: rgba(31, 32, 65, 0.25);
-      border-radius: 10px;
+    .checkbox-circle {
+      transform: translateX(22px);
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     }
-
-    input:checked ~ span {
-      &::before {
-        border: 1px solid #bc9cff;
-      }
-      .checkbox-circle {
-        transform: translateX(22px);
-        background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-      }
-    }
-    * {
-      transition: all 0.5s cubic-bezier(0.2, 0.85, 0.32, 1.2);
-    }
+  }
+  * {
+    transition: all 0.5s cubic-bezier(0.2, 0.85, 0.32, 1.2);
   }
 }

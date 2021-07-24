@@ -13,12 +13,18 @@ import RateButton from "./Components/RateButton/RateButton";
 import Buttons from "./Components/Buttons/Buttons";
 import MaskedTextField from "./Components/MaskedTextField/MaskedTextField";
 import RangeSlider from "./Components/RangeSlider/RangeSlider";
+import Pagination from "./Components/Pagination/Pagination";
 
 function App() {
   return (
     <div className="App">
       <img src={logo} alt="" className="logo" />
       <div className="Page">
+        <div>
+          <h3>Pagination</h3>
+          <Pagination />
+        </div>
+
         <div>
           <h3>Range Slider</h3>
           <RangeSlider />

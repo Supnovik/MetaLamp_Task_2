@@ -1,0 +1,40 @@
+.Pagination {
+  p {
+    display: none;
+  }
+  display: flex;
+  width: 300px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    cursor: pointer;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 22px;
+    background-color: white;
+    color: black;
+    opacity: 0.5;
+    &.active {
+      opacity: 1;
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      color: white;
+    }
+    &.arrow {
+      opacity: 1;
+      background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+      &-rotate {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+}
+p {
+  width: 320px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: black;
+  opacity: 0.75;
+}

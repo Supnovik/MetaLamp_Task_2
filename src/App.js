@@ -22,12 +22,20 @@ import ExpandableCheckbox from "./Components/ExpandableCheckbox/ExpandableCheckb
 import BulletList from "./Components/BulletList/BulletList";
 import Specifications from "./Components/Specifications/Specifications";
 import Reviews from "./Components/Reviews/Reviews";
+import DropDownSmall from "./Components/DropDownSmall/DropDownSmall";
 
 function App() {
   return (
     <div className="App">
       <img src={logo} alt="" className="logo" />
       <div className="Page">
+        <div>
+          <div className="text-dropdown">
+            <h3>Dropdown</h3>
+            <p>Default</p>
+          </div>
+          <DropDownSmall />
+        </div>
         <div>
           <Reviews
             review={{

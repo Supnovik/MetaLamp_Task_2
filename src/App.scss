@@ -51,7 +51,8 @@
   }
 }
 
-.text-field {
+.text-field,
+.text-dropdown {
   display: inline-flex;
   width: 320px;
   justify-content: space-between;
@@ -63,4 +64,7 @@
     text-transform: uppercase;
     opacity: 0.5;
   }
+}
+.text-dropdown {
+  width: 266px;
 }

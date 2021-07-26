@@ -1,0 +1,38 @@
+.Specifications {
+  width: 280px;
+  &-list-item {
+    position: relative;
+    div {
+      display: flex;
+      margin-bottom: 20px;
+      img {
+        display: block;
+        width: 40px;
+        height: 40px;
+      }
+      .text {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p,
+        h3 {
+          margin: 0;
+          padding: 0;
+          font-size: 14px;
+          line-height: 24px;
+          color: rgba(31, 32, 65, 0.75);
+          text-transform: none;
+        }
+      }
+    }
+
+    .underline {
+      position: absolute;
+      bottom: -20px;
+      background: rgba(31, 32, 65, 0.1);
+      height: 2px;
+      width: 100%;
+    }
+  }
+}

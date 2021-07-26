@@ -1,6 +1,9 @@
 import React from "react";
 
+import smile from "./img/insert_emoticon.png";
+import city from "./img/location_city.png";
 import logo from "./img/Group.png";
+import men from "./img/men.png";
 import "./App.scss";
 import TextField from "./Components/TextField/TextField";
 import DropDown from "./Components/DropDown/DropDown";
@@ -17,12 +20,41 @@ import RangeSlider from "./Components/RangeSlider/RangeSlider";
 import Pagination from "./Components/Pagination/Pagination";
 import ExpandableCheckbox from "./Components/ExpandableCheckbox/ExpandableCheckbox";
 import BulletList from "./Components/BulletList/BulletList";
+import Specifications from "./Components/Specifications/Specifications";
+import Reviews from "./Components/Reviews/Reviews";
 
 function App() {
   return (
     <div className="App">
       <img src={logo} alt="" className="logo" />
       <div className="Page">
+        <div>
+          <Reviews
+            review={{
+              name: "Мурад Сарафанов",
+              description:
+                "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
+              lastseen: "5 дней назад",
+              img: men,
+            }}
+          />
+        </div>
+        <div>
+          <Specifications
+            list={[
+              {
+                title: "Комфорт",
+                description: "Шумопоглощающие стены",
+                img: smile,
+              },
+              {
+                title: "Удобство",
+                description: "Окно в каждой и спален",
+                img: city,
+              },
+            ]}
+          />
+        </div>
         <div>
           <h3>Rich Checkbox buttons</h3>
           <RichCheckbox

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./ExpandableCheckbox.scss";
 import Checkbox from "../Checkbox/Checkbox";
 import arrow from "../../img/arrow-down.png";
-import arrowAct from "../../img/arrow-down-act.png";
 
 function ExpandableCheckbox() {
   var [isActive, setIsActive] = useState(false);

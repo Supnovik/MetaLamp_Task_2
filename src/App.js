@@ -15,12 +15,23 @@ import MaskedTextField from "./Components/MaskedTextField/MaskedTextField";
 import RangeSlider from "./Components/RangeSlider/RangeSlider";
 import Pagination from "./Components/Pagination/Pagination";
 import ExpandableCheckbox from "./Components/ExpandableCheckbox/ExpandableCheckbox";
+import BulletList from "./Components/BulletList/BulletList";
 
 function App() {
   return (
     <div className="App">
       <img src={logo} alt="" className="logo" />
       <div className="Page">
+        <div>
+          <h3>BulletList</h3>
+          <BulletList
+            list={[
+              "Нельзя с питомцами",
+              "Без вечеринок и мероприятий",
+              "Время прибытия - после 13:00, а выезд до 12:00",
+            ]}
+          />
+        </div>
         <div>
           <h3>Dropdown </h3>
           <DropDown />

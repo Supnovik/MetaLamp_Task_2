@@ -5,6 +5,7 @@ import "./App.scss";
 import TextField from "./Components/TextField/TextField";
 import DropDown from "./Components/DropDown/DropDown";
 import Checkbox from "./Components/Checkbox/Checkbox";
+import RichCheckbox from "./Components/RichCheckbox/RichCheckbox";
 import RadioButtons from "./Components/Radio buttons/RadioButtons";
 import Subscription from "./Components/Subscription/Subscription";
 import Toggle from "./Components/Toggle/Toggle";
@@ -22,6 +23,24 @@ function App() {
     <div className="App">
       <img src={logo} alt="" className="logo" />
       <div className="Page">
+        <div>
+          <h3>Rich Checkbox buttons</h3>
+          <RichCheckbox
+            list={[
+              {
+                title: "Широкий коридор",
+                description: "Ширина коридоров в номере не менее 91 см.",
+                checked: false,
+              },
+              {
+                title: "Помощник для инвалидов",
+                description:
+                  "На 1 этаже вас встретит специалист и проводит до номера",
+                checked: false,
+              },
+            ]}
+          />
+        </div>
         <div>
           <h3>BulletList</h3>
           <BulletList
@@ -47,10 +66,7 @@ function App() {
           <h3>Pagination</h3>
           <Pagination />
         </div>
-        <div>
-          <h3>Range Slider</h3>
-          <RangeSlider />
-        </div>
+
         <div>
           <h3>Masked Text Field</h3>
           <MaskedTextField />
@@ -94,6 +110,10 @@ function App() {
         </div>
         <div>
           <ExpandableCheckbox />
+        </div>
+        <div>
+          <h3>Range Slider</h3>
+          <RangeSlider />
         </div>
       </div>
     </div>

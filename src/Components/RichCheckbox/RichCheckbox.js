@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./Checkbox.scss";
+import "./RichCheckbox.scss";
 
-function Checkbox({ list }) {
+function RichCheckbox({ list }) {
   let [checkList, setCheckList] = useState(list);
   function Change(index) {
     let newArr = checkList.map((item, i) => {
@@ -15,28 +15,34 @@ function Checkbox({ list }) {
   }
 
   return (
-    <div className="check-list">
+    <div className="rich-check-list">
       {checkList.map((item, index) => {
         return (
-          <label key={item.name}>
+          <label key={item.title}>
             <input type="checkbox" className="checkbox" />
             {item.checked ? (
-              <span
+              <div
                 className="checked"
                 onClick={() => {
                   Change(index);
                 }}
               >
-                {item.name}
-              </span>
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+              </div>
             ) : (
-              <span
+              <div
                 onClick={() => {
                   Change(index);
                 }}
               >
-                {item.name}
-              </span>
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+              </div>
             )}
           </label>
         );
@@ -45,4 +51,4 @@ function Checkbox({ list }) {
   );
 }
 
-export default Checkbox;
+export default RichCheckbox;

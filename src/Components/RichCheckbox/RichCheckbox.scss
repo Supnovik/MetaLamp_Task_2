@@ -1,0 +1,53 @@
+.rich-check-list {
+  display: flex;
+  flex-direction: column;
+
+  .checkbox {
+    display: none;
+  }
+  .checkbox + div {
+    display: flex;
+    width: 300px;
+    margin: 5px 0 5px 0;
+    user-select: none;
+    font-size: 14px;
+    color: rgba(31, 32, 65, 0.5);
+    h3,
+    p {
+      margin: 0;
+    }
+    h3 {
+      margin-top: 2px;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 18px;
+      text-transform: none;
+      opacity: 0.75;
+      margin-bottom: 5px;
+    }
+    p {
+      opacity: 0.5;
+    }
+  }
+  .checkbox + div::before {
+    content: "";
+    cursor: pointer;
+
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding-right: 15px;
+  }
+  .checkbox + .checked::before {
+    border: 1px solid #bc9cff;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    background-image: url("../../img/Vector.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

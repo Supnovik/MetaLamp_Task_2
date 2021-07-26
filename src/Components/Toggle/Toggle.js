@@ -3,10 +3,10 @@ import "./Toggle.scss";
 
 function Toggle() {
   return (
-    <label className="checkbox">
+    <label className="toggle-checkbox">
       <input type="checkbox"></input>
       <span>
-        <div className="checkbox-circle" />
+        <div className="toggle-checkbox-circle" />
         Получать спецпредложения
       </span>
     </label>

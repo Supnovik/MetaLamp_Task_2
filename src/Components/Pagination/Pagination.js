@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./Pagination.scss";
 import arrow from "../../img/arrow_forward_white.svg";
 
 function Pagination() {
   var [activePage, setActivePage] = useState(1);
-  var [lastPage, setLastPage] = useState(15);
+  var lastPage = useRef(15);
 
   return (
-    <div>
-      <div className="Pagination">
+    <div className="Pagination">
+      <div className="Pagination-buttons">
         {activePage > 1 ? (
           <>
             <button
@@ -45,7 +45,7 @@ function Pagination() {
 
         <button className="active">{activePage}</button>
 
-        {activePage < lastPage ? (
+        {activePage < lastPage.current ? (
           <button onClick={() => setActivePage(activePage + 1)}>
             {activePage + 1}
           </button>
@@ -60,21 +60,23 @@ function Pagination() {
         ) : (
           <p></p>
         )}
-        {activePage < lastPage - 2 ? (
+        {activePage < lastPage.current - 2 ? (
           <>
             <div>...</div>
           </>
         ) : (
           <p></p>
         )}
-        {activePage < lastPage - 1 ? (
+        {activePage < lastPage.current - 1 ? (
           <>
-            <button onClick={() => setActivePage(lastPage)}>{lastPage}</button>
+            <button onClick={() => setActivePage(lastPage.current)}>
+              {lastPage.current}
+            </button>
           </>
         ) : (
           <p></p>
         )}
-        {activePage < lastPage ? (
+        {activePage < lastPage.current ? (
           <>
             <button
               onClick={() => setActivePage(activePage + 1)}

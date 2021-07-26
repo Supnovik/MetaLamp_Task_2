@@ -1,10 +1,10 @@
 .DropDown {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 320px;
   .Visitors {
     user-select: none;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -19,9 +19,7 @@
     color: rgba(31, 32, 65, 0.75);
     padding-left: 14px;
     padding-right: 15px;
-    img {
-      cursor: pointer;
-    }
+    cursor: pointer;
     &:focus,
     &:hover {
       border: 1px solid rgba(31, 32, 65, 0.5);
@@ -30,23 +28,24 @@
   }
 
   .guest-list {
+    position: absolute;
+    z-index: 99;
+    top: 44px;
+    width: 320px;
     user-select: none;
-
     height: 159px;
     border: 1px solid rgba(31, 32, 65, 0.25);
     box-sizing: border-box;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     border-radius: 4px;
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
     color: rgba(31, 32, 65, 0.75);
+    background-color: #fff;
     padding-left: 10px;
     padding-right: 10px;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: #1f2041;
+
     .guest-list-adults {
       display: flex;
       justify-content: space-between;
@@ -54,6 +53,9 @@
       > div {
         display: flex;
         align-items: center;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
         .minus,
         .plus {
           display: flex;
@@ -67,13 +69,22 @@
           border-color: #1f2041;
           opacity: 0.25;
           border-radius: 22px;
-          margin: 10px;
+          margin: 3px 10px 3px 10px;
           &.clicked {
             color: #1f2041;
             border-color: #1f2041;
             opacity: 0.5;
           }
         }
+      }
+    }
+    .list-buttons {
+      margin-top: 5px;
+      display: flex;
+      justify-content: space-between;
+      h3 {
+        cursor: pointer;
+        color: #bc9cff;
       }
     }
   }

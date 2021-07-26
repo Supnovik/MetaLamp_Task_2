@@ -1,0 +1,12 @@
+.exp-checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 320px;
+  img {
+    cursor: pointer;
+  }
+  .arrow {
+    transform: rotateX(180deg);
+  }
+}

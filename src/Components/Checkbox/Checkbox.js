@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import "./Checkbox.scss";
 
-function Checkbox() {
-  let [checkList, setCheckList] = useState([
-    { name: "Можно курить", checked: false },
-    { name: "Можно с питомцами", checked: false },
-    { name: "Можно пригласить гостей (до 10 человек)", checked: false },
-  ]);
+function Checkbox({ list }) {
+  let [checkList, setCheckList] = useState(list);
   function Change(index) {
     let newArr = checkList.map((item, i) => {
       if (index === i) {

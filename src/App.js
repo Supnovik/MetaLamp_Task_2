@@ -30,6 +30,10 @@ function App() {
       <img src={logo} alt="" className="logo" />
       <div className="Page">
         <div>
+          <RangeSlider />
+        </div>
+
+        <div>
           <div className="text-dropdown">
             <h3>Dropdown</h3>
             <p>Default</p>
@@ -106,7 +110,6 @@ function App() {
           <h3>Pagination</h3>
           <Pagination />
         </div>
-
         <div>
           <h3>Masked Text Field</h3>
           <MaskedTextField />
@@ -116,8 +119,8 @@ function App() {
           <Buttons Type="full" />
         </div>
         <div>
-          <h3>Rate Button</h3>
-          <RateButton />
+          <h3>Rate Button </h3>
+          <RateButton stars={4} />
         </div>
         <div>
           <h3>Like Button</h3>
@@ -150,10 +153,6 @@ function App() {
         </div>
         <div>
           <ExpandableCheckbox />
-        </div>
-        <div>
-          <h3>Range Slider</h3>
-          <RangeSlider />
         </div>
       </div>
     </div>

@@ -1,9 +1,22 @@
 import React, { useRef, useState } from "react";
 import "./RateButton.scss";
 
-function RateButton() {
-  var [activated, setActivated] = useState(["", "", "", "", ""]);
-  var lastclicked = useRef(-1);
+function initialization(n) {
+  var newArr = ["", "", "", "", ""];
+  newArr = newArr.map((item, i) => {
+    if (i + 1 <= n) {
+      return "active";
+    } else {
+      return "";
+    }
+  });
+  return newArr;
+}
+
+function RateButton({ stars }) {
+  var [activated, setActivated] = useState(initialization(stars));
+  var lastclicked = useRef(stars);
+
   function activate(n) {
     var newArr = ["", "", "", "", ""];
     var s = 0;

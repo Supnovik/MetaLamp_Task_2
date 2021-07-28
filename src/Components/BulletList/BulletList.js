@@ -8,7 +8,7 @@ function BulletList({ list }) {
     <div className="bullet-list">
       {checkList.current.map((item) => {
         return (
-          <div>
+          <div key={item}>
             <div />
             <p>{item}</p>
           </div>

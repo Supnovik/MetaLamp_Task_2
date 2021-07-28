@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/MetaLamp_Task_2/static/css/main.f42cc64f.chunk.css",
-    "main.js": "/MetaLamp_Task_2/static/js/main.850cd326.chunk.js",
-    "main.js.map": "/MetaLamp_Task_2/static/js/main.850cd326.chunk.js.map",
+    "main.css": "/MetaLamp_Task_2/static/css/main.0ce2f319.chunk.css",
+    "main.js": "/MetaLamp_Task_2/static/js/main.5a2caa26.chunk.js",
+    "main.js.map": "/MetaLamp_Task_2/static/js/main.5a2caa26.chunk.js.map",
     "runtime-main.js": "/MetaLamp_Task_2/static/js/runtime-main.ffcc8bc7.js",
     "runtime-main.js.map": "/MetaLamp_Task_2/static/js/runtime-main.ffcc8bc7.js.map",
     "static/js/2.5073f124.chunk.js": "/MetaLamp_Task_2/static/js/2.5073f124.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.b6853c87.chunk.js": "/MetaLamp_Task_2/static/js/3.b6853c87.chunk.js",
     "static/js/3.b6853c87.chunk.js.map": "/MetaLamp_Task_2/static/js/3.b6853c87.chunk.js.map",
     "index.html": "/MetaLamp_Task_2/index.html",
-    "static/css/main.f42cc64f.chunk.css.map": "/MetaLamp_Task_2/static/css/main.f42cc64f.chunk.css.map",
+    "static/css/main.0ce2f319.chunk.css.map": "/MetaLamp_Task_2/static/css/main.0ce2f319.chunk.css.map",
     "static/js/2.5073f124.chunk.js.LICENSE.txt": "/MetaLamp_Task_2/static/js/2.5073f124.chunk.js.LICENSE.txt",
     "static/media/RichCheckbox.scss": "/MetaLamp_Task_2/static/media/Vector.ad694aaf.svg",
     "static/media/Subscription.scss": "/MetaLamp_Task_2/static/media/arrow_forward.ae9e8d9b.svg",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.ffcc8bc7.js",
     "static/js/2.5073f124.chunk.js",
-    "static/css/main.f42cc64f.chunk.css",
-    "static/js/main.850cd326.chunk.js"
+    "static/css/main.0ce2f319.chunk.css",
+    "static/js/main.5a2caa26.chunk.js"
   ]
 }

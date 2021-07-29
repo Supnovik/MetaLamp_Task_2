@@ -22,22 +22,29 @@ function RangeSlider() {
       left: (value.min * 100) / (initial.max - initial.min) + "%",
     });
     console.log(value);
-  }, [value]);
+  }, [value, initial.max, initial.min]);
 
   function setMax(e) {
     if (
-      Math.abs(e.target.value - value.max) === initial.step &&
-      e.target.value >= value.min
+      Math.abs(e.target.value - value.max) >= initial.step &&
+      e.target.value >= value.min &&
+      e.target.value > initial.min + initial.step
     )
-      setValue({ ...value, max: Number(e.target.value) });
+      setValue({
+        ...value,
+        max: Number(Math.floor(e.target.value / 500) * 500),
+      });
   }
 
   function setMin(e) {
     if (
-      Math.abs(value.min - e.target.value) === initial.step &&
+      Math.abs(value.min - e.target.value) >= initial.step &&
       e.target.value <= value.max
     )
-      setValue({ ...value, min: Number(e.target.value) });
+      setValue({
+        ...value,
+        min: Number(Math.floor(e.target.value / 500) * 500),
+      });
   }
 
   return (
@@ -54,7 +61,7 @@ function RangeSlider() {
           min={initial.min}
           max={initial.max}
           value={value.min}
-          step={initial.step}
+          step={initial.step / 1000}
           onChange={(e) => setMin(e)}
         />
 
@@ -63,7 +70,7 @@ function RangeSlider() {
           min={initial.min}
           max={initial.max}
           value={value.max}
-          step={initial.step}
+          step={initial.step / 1000}
           onChange={(e) => setMax(e)}
         />
         <span style={style}></span>

@@ -24,7 +24,6 @@
     overflow: visible;
     outline: none;
     pointer-events: none;
-
     width: 266px;
     height: 6px;
 
@@ -41,13 +40,18 @@
       background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
 
       border: 2px solid #ffffff;
-      border-radius: 10px;
+      border-radius: 50%;
 
       position: relative;
 
       cursor: pointer;
       appearance: none;
       pointer-events: all;
+      &:active,
+      &:focus {
+        width: 16px;
+        height: 16px;
+      }
     }
     position: absolute;
     &:nth-child(1) {

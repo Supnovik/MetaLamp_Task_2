@@ -1,0 +1,15 @@
+.FilterDateDropDown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 266px;
+  .FilterDateDropDown-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+    width: 266px;
+
+    text-transform: uppercase;
+  }
+}

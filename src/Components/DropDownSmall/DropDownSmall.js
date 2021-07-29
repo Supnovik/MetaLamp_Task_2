@@ -39,7 +39,7 @@ function DropDownSmall() {
   return (
     <div className="DropDownSmall">
       <div
-        className="Inventory"
+        className="Inventory input-box"
         onClick={() => setIsActive((isActive = !isActive))}
       >
         <p>
@@ -85,7 +85,7 @@ function DropDownSmall() {
         )}
       </div>
       {isActive ? (
-        <div className="list">
+        <div className="input-box list">
           {inventory.map((item, index) => {
             return (
               <div className="list-adults" key={item.name}>

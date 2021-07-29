@@ -1,26 +1,6 @@
 .Subscription {
   position: relative;
-  width: 320px;
-  input {
-    width: 267px;
-    height: 44px;
-    left: 141px;
-    top: 163px;
-    background: #ffffff;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    box-sizing: border-box;
-    border-radius: 4px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    color: rgba(31, 32, 65, 0.75);
-    padding-left: 12px;
-    &:focus,
-    &:hover {
-      border: 1px solid rgba(31, 32, 65, 0.5);
-      outline-width: 0;
-    }
-  }
+  width: 267px;
 }
 
 .arrow-button {

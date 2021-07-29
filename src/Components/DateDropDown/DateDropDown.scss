@@ -1,0 +1,14 @@
+.DateDropDown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  cursor: pointer;
+  .DateDropDown-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+    text-transform: uppercase;
+  }
+}

@@ -50,7 +50,7 @@ function DropDown() {
   return (
     <div className="DropDown">
       <div
-        className="Visitors"
+        className="Visitors input-box"
         onClick={() => setIsActive((isActive = !isActive))}
       >
         {peopleCount === 0 ? (
@@ -81,7 +81,7 @@ function DropDown() {
         )}
       </div>
       {isActive ? (
-        <div className="guest-list">
+        <div className="input-box guest-list">
           {people.map((item, index) => {
             return (
               <div className="guest-list-adults" key={item.name}>

@@ -1,10 +1,10 @@
 import React from "react";
 import "./TextField.scss";
 
-function TextField() {
+function TextField({ type, text }) {
   return (
     <div className="TextField">
-      <input type="text" placeholder="Email" className="input-box"></input>
+      <input type={type} placeholder={text} className="input-box"></input>
     </div>
   );
 }

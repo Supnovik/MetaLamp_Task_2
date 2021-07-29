@@ -1,15 +1,11 @@
 import React from "react";
 import "./Buttons.scss";
 
-function Buttons({ Type }) {
-  return (
-    <div>
-      <button className="full">click me</button>
-      <button className="border">click me</button>
-      <button className="none">click me</button>
-      <button className="go-to-pay">Перейти к оплате</button>
-    </div>
-  );
+function Buttons({ type, text }) {
+  if (type === "full") return <button className="full">{text}</button>;
+  if (type === "border") return <button className="border">{text}</button>;
+  if (type === "none") return <button className="none">{text}</button>;
+  if (type === "long") return <button className="long">{text}</button>;
 }
 
 export default Buttons;

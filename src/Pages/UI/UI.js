@@ -43,7 +43,7 @@ export default function UI() {
             <h3>Text Field</h3>
             <p>Default</p>
           </div>
-          <TextField />
+          <TextField type={"text"} text="Email" />
         </div>
         <div>
           <RangeSlider />
@@ -126,7 +126,7 @@ export default function UI() {
         </div>
         <div>
           <h3>Buttons</h3>
-          <Buttons Type="full" />
+          <Buttons type="full" text="click me" />
         </div>
         <div>
           <h3>Rate Button </h3>

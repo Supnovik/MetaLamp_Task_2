@@ -6,11 +6,11 @@
     position: relative;
     text-transform: uppercase;
     width: 320px;
-
+    background-color: white;
     &::after {
       content: "";
       position: absolute;
-      z-index: 99;
+      z-index: 1;
       top: 1px;
       right: 1px;
       width: 40px;

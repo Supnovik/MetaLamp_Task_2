@@ -4,6 +4,7 @@ import logo from "../../img/Group.png";
 import FindNubers from "../../Cards/FindNumbers/FindNumbers";
 import Registration from "../../Cards/Registration/Registration";
 import Login from "../../Cards/Login/Login";
+import Reserve from "../../Cards/Reserve/Reserve";
 
 function CardsPage() {
   return (
@@ -26,6 +27,15 @@ function CardsPage() {
         }}
       >
         <Registration />
+      </div>
+      <div
+        style={{
+          position: "absolute",
+          left: "560px",
+          top: "152px",
+        }}
+      >
+        <Reserve />
       </div>
       <div
         style={{

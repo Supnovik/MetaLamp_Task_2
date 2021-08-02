@@ -10,10 +10,13 @@ export default function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/UI" component={UI} />
-        <Route path="/CardsPage" component={CardsPage} />
-        <Route path="/HeadersFootes" component={HeadersFootes} />
+        <Route exact path="/MetaLamp_Task_2/" component={Home} />
+        <Route path="/MetaLamp_Task_2/UI" component={UI} />
+        <Route path="/MetaLamp_Task_2/CardsPage" component={CardsPage} />
+        <Route
+          path="/MetaLamp_Task_2/HeadersFootes"
+          component={HeadersFootes}
+        />
       </Switch>
     </Router>
   );
@@ -24,16 +27,16 @@ function Home() {
     <div>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/MetaLamp_Task_2/">Home</Link>
         </li>
         <li>
-          <Link to="/UI">UI</Link>
+          <Link to="/MetaLamp_Task_2/UI">UI</Link>
         </li>
         <li>
-          <Link to="/CardsPage">CardsPage</Link>
+          <Link to="/MetaLamp_Task_2/CardsPage">CardsPage</Link>
         </li>
         <li>
-          <Link to="/HeadersFootes">HeadersFootes</Link>
+          <Link to="/MetaLamp_Task_2/HeadersFootes">HeadersFootes</Link>
         </li>
       </ul>
     </div>

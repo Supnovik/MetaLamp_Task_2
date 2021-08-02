@@ -1,0 +1,55 @@
+.Reserve {
+  width: 380px;
+  height: 512px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    div {
+      display: flex;
+      align-items: flex-end;
+      h1 {
+        margin-right: 8px;
+      }
+      p {
+        font-weight: bold;
+        color: #bc9cff;
+      }
+    }
+    p {
+      span {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+    margin-bottom: 21px;
+  }
+
+  .date {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .prices {
+    p {
+      margin-bottom: 10px;
+
+      display: flex;
+      justify-content: space-between;
+    }
+    margin-bottom: 30px;
+  }
+  .guest {
+    margin-bottom: 30px;
+  }
+  .total {
+    margin-bottom: 20px;
+  }
+}

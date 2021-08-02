@@ -12,27 +12,32 @@
       display: none;
     }
     display: flex;
-    width: 300px;
+    width: 240px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     button {
       cursor: pointer;
       border: none;
-      width: 40px;
-      height: 40px;
+
       border-radius: 22px;
       background-color: white;
+      box-sizing: border-box;
       color: black;
       opacity: 0.5;
       &.active {
         opacity: 1;
         background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
         color: white;
+        width: 40px;
+        height: 40px;
       }
       &.arrow {
         opacity: 1;
         background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+
+        width: 40px;
+        height: 40px;
         &-rotate {
           transform: rotateY(180deg);
         }

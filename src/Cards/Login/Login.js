@@ -11,14 +11,7 @@ function Login() {
         <TextField type={"email"} text="Email" />
         <TextField type={"password"} text="Пароль" />
         <Buttons type="long" text="войти" />
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            marginTop: "10px",
-            alignItems: "center",
-          }}
-        >
+        <div className="footer">
           <p>Нет аккаунта на Toxin?</p>
           <Buttons type="border" text="создать" />
         </div>

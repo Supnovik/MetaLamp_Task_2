@@ -21,7 +21,6 @@ function RangeSlider() {
         ((value.max - value.min) * 100) / (initial.max - initial.min) + "%",
       left: (value.min * 100) / (initial.max - initial.min) + "%",
     });
-    console.log(value);
   }, [value, initial.max, initial.min]);
 
   function setMax(e) {
@@ -80,20 +79,3 @@ function RangeSlider() {
 }
 
 export default RangeSlider;
-
-/*
-var [state, setState] = useState({
-    value5: {
-      min: 3,
-      max: 7,
-    },
-  });
-
-<InputRange
-        draggableTrack
-        maxValue={20}
-        minValue={0}
-        onChange={(value) => setState({ value5: value })}
-        onChangeComplete={(value) => console.log(value)}
-        value={state.value5}
-      />*/

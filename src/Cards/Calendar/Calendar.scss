@@ -1,0 +1,115 @@
+.Calendar {
+  width: 320px;
+  background: #ffffff;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+  .container {
+    margin: 20px;
+    width: 280px;
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      button {
+        border: none;
+        color: yellow;
+        font: inherit;
+        color: inherit;
+        width: 18px;
+        height: 18px;
+        background-color: transparent;
+        background-image: url("../../img/arrow_forward.svg");
+        background-repeat: no-repeat;
+        cursor: pointer;
+        &.rotate {
+          transform: rotateY(180deg);
+        }
+      }
+    }
+    li {
+      width: 40px;
+      height: 40px;
+      font-size: 12px;
+      line-height: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: normal;
+      color: rgba(31, 32, 65, 0.25);
+    }
+    .weekdays {
+      display: flex;
+      li {
+        font-weight: bold;
+        color: #bc9cff;
+      }
+    }
+
+    .days {
+      display: grid;
+      grid-template-columns: 40px 40px 40px 40px 40px 40px 40px;
+      li {
+        cursor: pointer;
+        &.current_month {
+          color: rgba(31, 32, 65, 0.5);
+          &.today {
+            color: white;
+            font-weight: bold;
+            background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+            border-radius: 22px;
+          }
+        }
+        &.edge {
+          &-left,
+          &-right {
+            color: white;
+            font-weight: bold;
+            background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+            border-radius: 22px;
+            span {
+              width: 40px;
+              height: 40px;
+              font-size: 12px;
+              line-height: 15px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              background: linear-gradient(180deg, #bb9cff48 0%, #8ba5f944 100%);
+            }
+          }
+          &-left {
+            span {
+              border-radius: 22px 0 0 22px;
+            }
+          }
+          &-right {
+            span {
+              border-radius: 0 22px 22px 0;
+            }
+          }
+        }
+        &.interval {
+          background: linear-gradient(180deg, #bb9cff48 0%, #8ba5f944 100%);
+          span {
+            color: rgba(31, 32, 65, 0.5);
+          }
+        }
+      }
+    }
+
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      h3 {
+        cursor: pointer;
+        color: #bc9cff;
+      }
+    }
+  }
+}

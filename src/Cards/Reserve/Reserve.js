@@ -2,7 +2,7 @@ import React from "react";
 import "./Reserve.scss";
 import Buttons from "../../Components/Buttons/Buttons";
 import DropDown from "../../Components/DropDown/DropDown";
-import DateDropDown from "../../Components/DateDropDown/DateDropDown";
+import DateChoosing from "../../Components/DateChoosing/DateChoosing";
 function Reserve() {
   return (
     <form className="Reserve">
@@ -16,16 +16,7 @@ function Reserve() {
             <span>9 990₽</span> в сутки
           </p>
         </div>
-        <div className="date">
-          <div>
-            <h3>прибытие</h3>
-            <DateDropDown />
-          </div>
-          <div>
-            <h3>выезд</h3>
-            <DateDropDown />
-          </div>
-        </div>
+        <DateChoosing />
         <div className="guest">
           <h3>гости</h3>
           <DropDown />

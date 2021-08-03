@@ -1,0 +1,13 @@
+.date {
+  position: relative;
+  &-dropdown {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  .Calendar {
+    position: absolute;
+    top: 1;
+    z-index: 99;
+  }
+}

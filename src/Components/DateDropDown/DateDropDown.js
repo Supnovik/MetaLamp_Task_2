@@ -1,18 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import "./DateDropDown.scss";
 import arrow from "../../img/arrow-down.png";
 import arrowAct from "../../img/arrow-down-act.png";
 
-function DateDropDown() {
-  var [isActive, setIsActive] = useState(false);
-
+function DateDropDown({ date, isActive }) {
   return (
     <div className="DateDropDown">
-      <div
-        className="DateDropDown-text input-box"
-        onClick={() => setIsActive((isActive = !isActive))}
-      >
-        ДД.ММ.ГГГГ
+      <div className="DateDropDown-text input-box">
+        <>{date.getDate() < 10 ? <>0</> : <></>}</>
+        {date.getDate()}.<>{date.getMonth() < 10 ? <>0</> : <></>}</>
+        {date.getMonth()}.{date.getFullYear()}
         {isActive ? (
           <img src={arrowAct} alt="&#8744;" />
         ) : (

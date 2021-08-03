@@ -32,12 +32,21 @@ function setMonth(n) {
   }
 }
 
-function Calendar({ today, firstday, lastday, setFirstday, setLastday }) {
-  var [current_state, setCurrent_state] = useState(
-    new Date("2019-08-08T03:24:00")
-  );
+function Calendar({
+  today,
+  firstday,
+  lastday,
+  setFirstday,
+  setLastday,
+  isActivated,
+  close,
+}) {
+  var [current_state, setCurrent_state] = useState(today);
   var month = setMonth(current_state.getMonth());
   var [current_days, setCurrent_days] = useState(initial(current_state));
+  var [current_firstday, setCurrent_firstday] = useState(firstday);
+  var [current_lastday, setCurrent_lastday] = useState(lastday);
+
   function initial(Current_state) {
     var array = [];
     var state = new Date(
@@ -92,14 +101,48 @@ function Calendar({ today, firstday, lastday, setFirstday, setLastday }) {
 
   function setInterval(clicked_day) {
     if (
-      firstday !== undefined &&
-      Math.abs(clicked_day.getDate() - firstday.getDate()) <
-        Math.abs(lastday.getDate() - clicked_day.getDate())
+      current_firstday !== undefined &&
+      isActivated === true &&
+      getDayfromMs(clicked_day) <= getDayfromMs(current_lastday)
     )
-      setFirstday(clicked_day);
-    else setLastday(clicked_day);
+      setCurrent_firstday(clicked_day);
+    else if (
+      current_lastday !== undefined &&
+      isActivated === false &&
+      getDayfromMs(clicked_day) >= getDayfromMs(current_firstday)
+    )
+      setCurrent_lastday(clicked_day);
+  }
 
-    console.log(firstday.getDate(), lastday.getDate());
+  function getDayfromMs(ms) {
+    return Math.floor(ms.getTime() / 1000 / 60 / 60 / 24);
+  }
+
+  function setDataType(number, i) {
+    var dataClass = "";
+    if (current_firstday !== undefined && current_lastday !== undefined) {
+      if (getDayfromMs(current_firstday) === getDayfromMs(number.id))
+        dataClass = "edge-left";
+      else if (getDayfromMs(current_lastday) === getDayfromMs(number.id))
+        dataClass = "edge-right";
+      else if (
+        getDayfromMs(current_firstday) <= getDayfromMs(number.id) &&
+        getDayfromMs(current_lastday) >= getDayfromMs(number.id)
+      )
+        dataClass = "interval";
+      else if (getDayfromMs(number.id) === getDayfromMs(today))
+        dataClass = "current_month today";
+      else dataClass = "current_month";
+    }
+    return (
+      <li
+        className={dataClass}
+        key={current_days[i].id.toISOString()}
+        onClick={() => setInterval(number.id)}
+      >
+        <span>{number.id.getDate()}</span>
+      </li>
+    );
   }
 
   return (
@@ -158,95 +201,28 @@ function Calendar({ today, firstday, lastday, setFirstday, setLastday }) {
         </div>
         <div className="days">
           {current_days.map((number, i) => {
-            if (
-              firstday !== undefined &&
-              firstday.getFullYear() === number.id.getFullYear() &&
-              firstday.getMonth() === number.id.getMonth() &&
-              firstday.getDate() === number.id.getDate()
-            )
-              return (
-                <li
-                  className="edge-left"
-                  key={current_days[i].id.toISOString()}
-                  onClick={() => setInterval(number.id)}
-                >
-                  <span>{number.id.getDate()}</span>
-                </li>
-              );
-            if (
-              lastday !== undefined &&
-              lastday.getFullYear() === number.id.getFullYear() &&
-              lastday.getMonth() === number.id.getMonth() &&
-              lastday.getDate() === number.id.getDate()
-            )
-              return (
-                <li
-                  className="edge-right"
-                  key={current_days[i].id.toISOString()}
-                  onClick={() => setInterval(number.id)}
-                >
-                  <span>{number.id.getDate()}</span>
-                </li>
-              );
-            if (
-              firstday !== undefined &&
-              firstday.getFullYear() <= number.id.getFullYear() &&
-              firstday.getMonth() <= number.id.getMonth() &&
-              firstday.getDate() <= number.id.getDate() &&
-              lastday !== undefined &&
-              lastday.getFullYear() >= number.id.getFullYear() &&
-              lastday.getMonth() >= number.id.getMonth() &&
-              lastday.getDate() >= number.id.getDate()
-            )
-              return (
-                <li
-                  className="interval"
-                  key={current_days[i].id.toISOString()}
-                  onClick={() => setInterval(number.id)}
-                >
-                  <span>{number.id.getDate()}</span>
-                </li>
-              );
-
-            if (number.id.getMonth() === current_state.getMonth()) {
-              if (
-                number.id.getDate() === today.getDate() &&
-                number.id.getMonth() === today.getMonth() &&
-                number.id.getFullYear() === today.getFullYear()
-              )
-                return (
-                  <li
-                    className="current_month today"
-                    key={current_days[i].id.toISOString()}
-                    onClick={() => setInterval(number.id)}
-                  >
-                    <span>{number.id.getDate()}</span>
-                  </li>
-                );
-              else
-                return (
-                  <li
-                    className="current_month"
-                    key={current_days[i].id.toISOString()}
-                    onClick={() => setInterval(number.id)}
-                  >
-                    <span>{number.id.getDate()}</span>
-                  </li>
-                );
-            } else
-              return (
-                <li
-                  key={current_days[i].id.toISOString()}
-                  onClick={() => setInterval(number.id)}
-                >
-                  <span>{number.id.getDate()}</span>
-                </li>
-              );
+            return setDataType(number, i);
           })}
         </div>
         <div className="buttons">
-          <h3>очистить</h3>
-          <h3>применить</h3>
+          <h3
+            onClick={() => {
+              setCurrent_firstday(firstday);
+              setCurrent_lastday(lastday);
+              close();
+            }}
+          >
+            очистить
+          </h3>
+          <h3
+            onClick={() => {
+              setFirstday(current_firstday);
+              setLastday(current_lastday);
+              close();
+            }}
+          >
+            применить
+          </h3>
         </div>
       </div>
     </div>

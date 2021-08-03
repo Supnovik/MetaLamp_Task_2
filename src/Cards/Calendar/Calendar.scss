@@ -8,6 +8,7 @@
   .container {
     margin: 20px;
     width: 280px;
+    user-select: none;
 
     .title {
       display: flex;

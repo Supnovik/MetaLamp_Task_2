@@ -6,6 +6,9 @@ import Registration from "../../Cards/Registration/Registration";
 import Login from "../../Cards/Login/Login";
 import Reserve from "../../Cards/Reserve/Reserve";
 import Calendar from "../../Cards/Calendar/Calendar";
+import RoomCard from "../../Cards/RoomCard/RoomCard";
+import room888 from "../../img/rooms/room_888.jpg";
+import room840 from "../../img/rooms/room_840.jpg";
 
 function CardsPage() {
   const today = new Date("2019-08-08T03:24:00");
@@ -64,6 +67,38 @@ function CardsPage() {
           lastday={lastday}
           setFirstday={setFirstday}
           setLastday={setLastday}
+        />
+      </div>
+      <div
+        style={{
+          position: "absolute",
+          left: "980px",
+          top: "559px",
+        }}
+      >
+        <RoomCard
+          roomNumber={888}
+          lux={true}
+          stars={5}
+          dayPrice={9990}
+          reviews={145}
+          img={room888}
+        />
+      </div>
+      <div
+        style={{
+          position: "absolute",
+          left: "980px",
+          top: "856px",
+        }}
+      >
+        <RoomCard
+          roomNumber={840}
+          lux={false}
+          stars={4}
+          dayPrice={9990}
+          reviews={65}
+          img={room840}
         />
       </div>
     </div>

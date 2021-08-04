@@ -82,29 +82,34 @@ function DropDown() {
       </div>
       {isActive ? (
         <div className="input-box guest-list">
-          {people.map((item, index) => {
-            return (
-              <div className="guest-list-adults" key={item.name}>
-                <h3>{item.name}</h3>
-                <div>
-                  {item.count === 0 ? (
-                    <div className={"minus"}>-</div>
-                  ) : (
-                    <div className={"minus clicked"} onClick={() => sub(index)}>
-                      -
-                    </div>
-                  )}
+          <div className="guest-list-container">
+            {people.map((item, index) => {
+              return (
+                <div className="guest-list-adults" key={item.name}>
+                  <h3>{item.name}</h3>
+                  <div>
+                    {item.count === 0 ? (
+                      <div className={"minus"}>-</div>
+                    ) : (
+                      <div
+                        className={"minus clicked"}
+                        onClick={() => sub(index)}
+                      >
+                        -
+                      </div>
+                    )}
 
-                  <div className="count ">
-                    <h3>{item.count}</h3>
-                  </div>
-                  <div className="plus clicked" onClick={() => add(index)}>
-                    +
+                    <div className="count ">
+                      <h3>{item.count}</h3>
+                    </div>
+                    <div className="plus clicked" onClick={() => add(index)}>
+                      +
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
           <div className="list-buttons">
             <h3 onClick={() => clear()}>очистить</h3>
             <h3 onClick={() => setIsActive((isActive = !isActive))}>

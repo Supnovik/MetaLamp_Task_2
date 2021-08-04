@@ -11,9 +11,9 @@ import room888 from "../../img/rooms/room_888.jpg";
 import room840 from "../../img/rooms/room_840.jpg";
 
 function CardsPage() {
-  const today = new Date("2019-08-08T03:24:00");
-  var [firstday, setFirstday] = useState(new Date("2019-08-19T03:24:00"));
-  var [lastday, setLastday] = useState(new Date("2019-08-23T03:24:00"));
+  const today = new Date("2019-08-08");
+  var [firstday, setFirstday] = useState(new Date("2019-08-19"));
+  var [lastday, setLastday] = useState(new Date("2019-08-23"));
 
   return (
     <div className="CardsPage">

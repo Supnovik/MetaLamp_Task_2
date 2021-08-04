@@ -35,11 +35,7 @@ function DateChoosing() {
         <div>
           <h3>выезд</h3>
           <div onClick={() => activate(2)}>
-            <DateDropDown
-              date={lastday}
-              isActive={isActive_2}
-              setIsActive={setIsActive_2}
-            />
+            <DateDropDown date={lastday} isActive={isActive_2} />
           </div>
         </div>
       </div>

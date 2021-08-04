@@ -149,8 +149,8 @@ function Calendar({
     <div className="Calendar">
       <div className="container">
         <div className="title">
-          <button
-            className="rotate"
+          <div
+            className="button rotate"
             onClick={() => {
               setCurrent_state(
                 new Date(
@@ -171,7 +171,8 @@ function Calendar({
           <h2>
             {month} {current_state.getFullYear()}
           </h2>
-          <button
+          <div
+            className="button"
             onClick={() => {
               setCurrent_state(
                 new Date(

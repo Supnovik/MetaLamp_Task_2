@@ -7,9 +7,18 @@ function DateDropDown({ date, isActive }) {
   return (
     <div className="DateDropDown">
       <div className="DateDropDown-text input-box">
-        <>{date.getDate() < 10 ? <>0</> : <></>}</>
-        {date.getDate()}.<>{date.getMonth() < 10 ? <>0</> : <></>}</>
-        {date.getMonth()}.{date.getFullYear()}
+        <>
+          {date !== undefined ? (
+            <>
+              <>{date.getDate() < 10 ? <>0</> : <></>}</>
+              {date.getDate()}.<>{date.getMonth() < 10 ? <>0</> : <></>}</>
+              {date.getMonth()}.{date.getFullYear()}
+            </>
+          ) : (
+            <>ДД.ММ.ГГГГ</>
+          )}
+        </>
+
         {isActive ? (
           <img src={arrowAct} alt="&#8744;" />
         ) : (

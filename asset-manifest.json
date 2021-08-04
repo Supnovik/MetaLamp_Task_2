@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/MetaLamp_Task_2/static/css/main.a5245bf9.chunk.css",
-    "main.js": "/MetaLamp_Task_2/static/js/main.bd0175ef.chunk.js",
-    "main.js.map": "/MetaLamp_Task_2/static/js/main.bd0175ef.chunk.js.map",
+    "main.css": "/MetaLamp_Task_2/static/css/main.0ca5b5cd.chunk.css",
+    "main.js": "/MetaLamp_Task_2/static/js/main.45541e74.chunk.js",
+    "main.js.map": "/MetaLamp_Task_2/static/js/main.45541e74.chunk.js.map",
     "runtime-main.js": "/MetaLamp_Task_2/static/js/runtime-main.cae8c2b5.js",
     "runtime-main.js.map": "/MetaLamp_Task_2/static/js/runtime-main.cae8c2b5.js.map",
     "static/js/2.e1a97c8c.chunk.js": "/MetaLamp_Task_2/static/js/2.e1a97c8c.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.061d5240.chunk.js": "/MetaLamp_Task_2/static/js/3.061d5240.chunk.js",
     "static/js/3.061d5240.chunk.js.map": "/MetaLamp_Task_2/static/js/3.061d5240.chunk.js.map",
     "index.html": "/MetaLamp_Task_2/index.html",
-    "static/css/main.a5245bf9.chunk.css.map": "/MetaLamp_Task_2/static/css/main.a5245bf9.chunk.css.map",
+    "static/css/main.0ca5b5cd.chunk.css.map": "/MetaLamp_Task_2/static/css/main.0ca5b5cd.chunk.css.map",
     "static/js/2.e1a97c8c.chunk.js.LICENSE.txt": "/MetaLamp_Task_2/static/js/2.e1a97c8c.chunk.js.LICENSE.txt",
     "static/media/RichCheckbox.scss": "/MetaLamp_Task_2/static/media/Vector.ad694aaf.svg",
     "static/media/Calendar.scss": "/MetaLamp_Task_2/static/media/arrow_forward.ae9e8d9b.svg",
@@ -24,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.cae8c2b5.js",
     "static/js/2.e1a97c8c.chunk.js",
-    "static/css/main.a5245bf9.chunk.css",
-    "static/js/main.bd0175ef.chunk.js"
+    "static/css/main.0ca5b5cd.chunk.css",
+    "static/js/main.45541e74.chunk.js"
   ]
 }

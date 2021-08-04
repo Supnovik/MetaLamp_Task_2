@@ -1,28 +1,30 @@
 {
   "files": {
-    "main.css": "/MetaLamp_Task_2/static/css/main.baa7fc41.chunk.css",
-    "main.js": "/MetaLamp_Task_2/static/js/main.09cfbae4.chunk.js",
-    "main.js.map": "/MetaLamp_Task_2/static/js/main.09cfbae4.chunk.js.map",
-    "runtime-main.js": "/MetaLamp_Task_2/static/js/runtime-main.5230cb48.js",
-    "runtime-main.js.map": "/MetaLamp_Task_2/static/js/runtime-main.5230cb48.js.map",
-    "static/js/2.8db931fa.chunk.js": "/MetaLamp_Task_2/static/js/2.8db931fa.chunk.js",
-    "static/js/2.8db931fa.chunk.js.map": "/MetaLamp_Task_2/static/js/2.8db931fa.chunk.js.map",
-    "static/js/3.fb5498de.chunk.js": "/MetaLamp_Task_2/static/js/3.fb5498de.chunk.js",
-    "static/js/3.fb5498de.chunk.js.map": "/MetaLamp_Task_2/static/js/3.fb5498de.chunk.js.map",
+    "main.css": "/MetaLamp_Task_2/static/css/main.a5245bf9.chunk.css",
+    "main.js": "/MetaLamp_Task_2/static/js/main.145a5982.chunk.js",
+    "main.js.map": "/MetaLamp_Task_2/static/js/main.145a5982.chunk.js.map",
+    "runtime-main.js": "/MetaLamp_Task_2/static/js/runtime-main.cae8c2b5.js",
+    "runtime-main.js.map": "/MetaLamp_Task_2/static/js/runtime-main.cae8c2b5.js.map",
+    "static/js/2.e1a97c8c.chunk.js": "/MetaLamp_Task_2/static/js/2.e1a97c8c.chunk.js",
+    "static/js/2.e1a97c8c.chunk.js.map": "/MetaLamp_Task_2/static/js/2.e1a97c8c.chunk.js.map",
+    "static/js/3.061d5240.chunk.js": "/MetaLamp_Task_2/static/js/3.061d5240.chunk.js",
+    "static/js/3.061d5240.chunk.js.map": "/MetaLamp_Task_2/static/js/3.061d5240.chunk.js.map",
     "index.html": "/MetaLamp_Task_2/index.html",
-    "static/css/main.baa7fc41.chunk.css.map": "/MetaLamp_Task_2/static/css/main.baa7fc41.chunk.css.map",
-    "static/js/2.8db931fa.chunk.js.LICENSE.txt": "/MetaLamp_Task_2/static/js/2.8db931fa.chunk.js.LICENSE.txt",
+    "static/css/main.a5245bf9.chunk.css.map": "/MetaLamp_Task_2/static/css/main.a5245bf9.chunk.css.map",
+    "static/js/2.e1a97c8c.chunk.js.LICENSE.txt": "/MetaLamp_Task_2/static/js/2.e1a97c8c.chunk.js.LICENSE.txt",
     "static/media/RichCheckbox.scss": "/MetaLamp_Task_2/static/media/Vector.ad694aaf.svg",
     "static/media/Calendar.scss": "/MetaLamp_Task_2/static/media/arrow_forward.ae9e8d9b.svg",
     "static/media/Buttons.scss": "/MetaLamp_Task_2/static/media/arrow_forward_white.d4701dff.svg",
     "static/media/RadioButtons.scss": "/MetaLamp_Task_2/static/media/circle.8b4bd132.svg",
     "static/media/LikeButton.scss": "/MetaLamp_Task_2/static/media/heart.69d1f532.svg",
+    "static/media/room_840.6bd01275.jpg": "/MetaLamp_Task_2/static/media/room_840.6bd01275.jpg",
+    "static/media/room_888.be19ebef.jpg": "/MetaLamp_Task_2/static/media/room_888.be19ebef.jpg",
     "static/media/RateButton.scss": "/MetaLamp_Task_2/static/media/star_border.d6f803db.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.5230cb48.js",
-    "static/js/2.8db931fa.chunk.js",
-    "static/css/main.baa7fc41.chunk.css",
-    "static/js/main.09cfbae4.chunk.js"
+    "static/js/runtime-main.cae8c2b5.js",
+    "static/js/2.e1a97c8c.chunk.js",
+    "static/css/main.a5245bf9.chunk.css",
+    "static/js/main.145a5982.chunk.js"
   ]
 }

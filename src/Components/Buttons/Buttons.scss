@@ -1,59 +1,67 @@
-.full,
-.border,
-.none,
-.long {
-  border-radius: 22px;
+.Buttons {
+  .full,
+  .border,
+  .none,
+  .long {
+    border-radius: 22px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    padding: 0;
+    height: 44px;
 
-  width: 99px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  padding: 0;
-  height: 44px;
-
-  &:hover {
-    opacity: 1;
+    &:hover {
+      opacity: 1;
+    }
   }
-}
 
-.full {
-  color: #ffffff;
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  opacity: 0.5;
-}
-.border {
-  background: white;
-  border: 2px solid;
-
-  color: #bc9cff;
-  border-color: rgba(187, 155, 255, 0.5);
-  &:hover {
-    border-color: rgba(187, 155, 255, 1);
+  .full {
+    padding-left: 19px;
+    padding-right: 19px;
+    color: #ffffff;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    opacity: 0.5;
   }
-}
-.none {
-  color: rgba(31, 32, 65, 0.5);
-  background: white;
-
-  &:hover {
+  .border {
+    background: white;
+    border: 2px solid;
+    width: 99px;
     color: #bc9cff;
+    border-color: rgba(187, 155, 255, 0.5);
+    &:hover {
+      border-color: rgba(187, 155, 255, 1);
+    }
+    &.active {
+      border-color: rgba(187, 155, 255, 1);
+    }
   }
-}
+  .none {
+    color: rgba(31, 32, 65, 0.5);
+    background: white;
+    width: 99px;
+    &:hover {
+      color: #bc9cff;
+    }
+  }
 
-.long {
-  position: relative;
-  width: 320px;
-  color: #ffffff;
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  &::after {
-    content: "";
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    right: 22px;
-    background-image: url("../../img/arrow_forward_white.svg");
+  .long {
+    position: relative;
+    width: 320px;
+    color: #ffffff;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    &::after {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      right: 22px;
+      background-image: url("../../img/arrow_forward_white.svg");
+    }
+  }
+  .active {
+    opacity: 1;
   }
 }

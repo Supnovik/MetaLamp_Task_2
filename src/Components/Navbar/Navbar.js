@@ -11,7 +11,7 @@ function Navbar({ isLogin, personality }) {
   var isServices = false;
   return (
     <div className="Navbar">
-      <div className="Navbar-container">
+      <div className="Navbar-container content-container">
         <a href="/MetaLamp_Task_2/" className="company-name">
           <img src={logo} alt="" />
           <img src={toxin} alt="" />

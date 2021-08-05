@@ -11,7 +11,7 @@ import insta from "../../img/insta.svg";
 function Footer() {
   return (
     <div className="Footer">
-      <div className="description Footer-container">
+      <div className="description content-container">
         <div>
           <a href="/MetaLamp_Task_2/" className="company-name">
             <img src={logo} alt="" />
@@ -49,7 +49,7 @@ function Footer() {
         </div>
       </div>
       <div className="Footer-outline" />
-      <div className="policy Footer-container">
+      <div className="policy content-container">
         <p>Copyright © 2018 Toxin отель. Все права защищены.</p>
         <div>
           <a href="/MetaLamp_Task_2/">

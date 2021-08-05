@@ -5,6 +5,9 @@ import "./App.scss";
 import UI from "./Pages/UI/UI";
 import CardsPage from "./Pages/CardsPage/CardsPage";
 import HeadersFootes from "./Pages/HeadersFooters/HeadersFooters";
+import LandingPage from "./Pages/LandingPage/LandingPage";
+import RegistrationPage from "./Pages/RegistrationPage/RegistrationPage";
+import LoginPage from "./Pages/LoginPage/LoginPage";
 
 export default function App() {
   return (
@@ -17,6 +20,12 @@ export default function App() {
           path="/MetaLamp_Task_2/HeadersFootes"
           component={HeadersFootes}
         />
+        <Route path="/MetaLamp_Task_2/LandingPage" component={LandingPage} />
+        <Route
+          path="/MetaLamp_Task_2/RegistrationPage"
+          component={RegistrationPage}
+        />
+        <Route path="/MetaLamp_Task_2/LoginPage" component={LoginPage} />
       </Switch>
     </Router>
   );
@@ -37,6 +46,15 @@ function Home() {
         </li>
         <li>
           <Link to="/MetaLamp_Task_2/HeadersFootes">HeadersFootes</Link>
+        </li>
+        <li>
+          <Link to="/MetaLamp_Task_2/LandingPage">LandingPage</Link>
+        </li>
+        <li>
+          <Link to="/MetaLamp_Task_2/RegistrationPage">RegistrationPage</Link>
+        </li>
+        <li>
+          <Link to="/MetaLamp_Task_2/LoginPage">LoginPage</Link>
         </li>
       </ul>
     </div>

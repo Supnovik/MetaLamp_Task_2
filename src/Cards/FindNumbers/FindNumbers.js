@@ -7,7 +7,7 @@ import DateChoosing from "../../Components/DateChoosing/DateChoosing";
 function FindNumbers() {
   return (
     <form className="FindNumbers">
-      <div className="container">
+      <div className="cards-container">
         <h1>Найдём номера под ваши пожелания</h1>
         <DateChoosing />
 

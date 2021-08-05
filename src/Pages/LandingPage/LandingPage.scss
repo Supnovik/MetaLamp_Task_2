@@ -1,0 +1,17 @@
+.LandingPage {
+  &-info {
+    position: relative;
+    background-size: cover;
+    height: 900px;
+    > div {
+      padding-top: 70px;
+    }
+    > p {
+      position: absolute;
+      width: 300px;
+      bottom: 18px;
+      right: 150px;
+      text-align: right;
+    }
+  }
+}

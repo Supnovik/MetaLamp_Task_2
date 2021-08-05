@@ -9,7 +9,7 @@ import Toggle from "../../Components/Toggle/Toggle";
 function Registration() {
   return (
     <form className="Registration">
-      <div className="container">
+      <div className="cards-container">
         <h1>Регистрация аккаунта</h1>
 
         <TextField type={"text"} text="Имя" />
@@ -27,14 +27,7 @@ function Registration() {
         </div>
         <Toggle />
         <Buttons type="long" text="перейти к оплате" />
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            marginTop: "15px",
-            alignItems: "center",
-          }}
-        >
+        <div className="Registration-footer">
           <p>Уже есть аккаунт на Toxin</p>
           <Buttons type="border" text="войти" />
         </div>

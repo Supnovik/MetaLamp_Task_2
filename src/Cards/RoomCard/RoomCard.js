@@ -21,7 +21,7 @@ export default function RoomCard({
           <div></div>
         </div>
       </div>
-      <div className="container">
+      <div className="RoomCard-container">
         <div className="title">
           <div>
             <h2>№</h2>

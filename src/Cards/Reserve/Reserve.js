@@ -6,7 +6,7 @@ import DateChoosing from "../../Components/DateChoosing/DateChoosing";
 function Reserve() {
   return (
     <form className="Reserve">
-      <div className="container">
+      <div className="cards-container">
         <div className="title">
           <div>
             <h1>№ 888</h1>

@@ -5,13 +5,13 @@ import TextField from "../../Components/TextField/TextField";
 function Login() {
   return (
     <form className="Login">
-      <div className="container">
+      <div className="cards-container">
         <h1>Войти</h1>
 
         <TextField type={"email"} text="Email" />
         <TextField type={"password"} text="Пароль" />
         <Buttons type="long" text="войти" />
-        <div className="footer">
+        <div className="Login-footer">
           <p>Нет аккаунта на Toxin?</p>
           <Buttons type="border" text="создать" />
         </div>

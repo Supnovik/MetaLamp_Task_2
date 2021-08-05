@@ -1,11 +1,6 @@
 .Footer {
-  width: 100vw;
-
   background-color: white;
 
-  &-container {
-    padding: 0 10% 0 10%;
-  }
   .description {
     height: 262px;
     display: flex;
@@ -40,7 +35,6 @@
     }
   }
   &-outline {
-    width: 100vw;
     height: 2px;
     background-color: rgba(31, 32, 65, 0.25);
   }

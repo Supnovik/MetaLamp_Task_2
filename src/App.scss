@@ -47,3 +47,15 @@
   left: 28px;
   top: 28px;
 }
+.content-container {
+  padding: 0 10% 0 10%;
+}
+
+.cards-container {
+  position: relative;
+  width: 320px;
+  margin: 40px 30px 0 30px;
+  > h1 {
+    margin-bottom: 21px;
+  }
+}

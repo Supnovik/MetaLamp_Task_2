@@ -1,0 +1,27 @@
+.FooterMobile {
+  width: 768px;
+  height: 367px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  .company-name {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    img {
+      margin-right: 13px;
+    }
+  }
+
+  > div {
+    height: 70px;
+    display: flex;
+
+    align-items: center;
+    img {
+      margin: 10px;
+    }
+  }
+}

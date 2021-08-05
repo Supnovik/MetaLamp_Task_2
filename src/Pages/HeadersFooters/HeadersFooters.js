@@ -2,6 +2,8 @@ import React from "react";
 import "./HeadersFooters.scss";
 import logo from "../../img/Group.png";
 import Navbar from "../../Components/Navbar/Navbar";
+import Footer from "../../Components/Footer/Footer";
+import FooterMobile from "../../Components/FooterMobile/FooterMobile";
 
 function HeadersFooters() {
   return (
@@ -17,10 +19,10 @@ function HeadersFooters() {
         />
       </div>
       <div style={{ position: "absolute", top: "360px" }}>
-        <Navbar
-          isLogin={true}
-          personality={{ name: "Юлий", surname: "Цезарь" }}
-        />
+        <Footer />
+      </div>
+      <div style={{ position: "absolute", top: "843px", left: "336px" }}>
+        <FooterMobile />
       </div>
     </div>
   );

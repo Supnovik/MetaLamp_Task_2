@@ -8,7 +8,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 320px;
     cursor: pointer;
   }
 
@@ -16,7 +15,7 @@
     position: absolute;
     z-index: 99;
     top: 44px;
-    width: 320px;
+    width: inherit;
     user-select: none;
     height: 159px;
     background-color: #fff;

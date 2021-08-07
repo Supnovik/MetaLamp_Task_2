@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./RangeSlider.scss";
-function RangeSlider() {
+function RangeSlider({ text }) {
   const initial = {
     min: 0,
     max: 15000,
@@ -49,7 +49,7 @@ function RangeSlider() {
   return (
     <>
       <div className="RangeSlider-title">
-        <h3>Range Slider</h3>
+        <h3>{text}</h3>
         <p>
           {value.min}₽ - {value.max}₽
         </p>

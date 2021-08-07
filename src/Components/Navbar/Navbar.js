@@ -52,10 +52,10 @@ function Navbar({ isLogin, personality }) {
             </>
           ) : (
             <>
-              <a href="/MetaLamp_Task_2/">
+              <a href="/MetaLamp_Task_2/LoginPage">
                 <Buttons type="border" text="Войти" isActive={true} />
               </a>
-              <a href="/MetaLamp_Task_2/">
+              <a href="/MetaLamp_Task_2/RegistrationPage">
                 <Buttons
                   type="full"
                   text="Зарегистрироваться"

@@ -3,25 +3,19 @@ import "./ExpandableCheckbox.scss";
 import Checkbox from "../Checkbox/Checkbox";
 import arrow from "../../img/arrow-down.png";
 
-function ExpandableCheckbox() {
+function ExpandableCheckbox({ text }) {
   var [isActive, setIsActive] = useState(false);
   return (
     <div>
-      <div className={"exp-checkbox"}>
-        <h3>Expandable Checkbox List</h3>
+      <div
+        className={"ExpandableCheckbox"}
+        onClick={() => setIsActive((isActive = !isActive))}
+      >
+        <h3>{text}</h3>
         {isActive ? (
-          <img
-            src={arrow}
-            alt="&#8744;"
-            className="arrow"
-            onClick={() => setIsActive((isActive = !isActive))}
-          />
+          <img src={arrow} alt="&#8744;" className="arrow" />
         ) : (
-          <img
-            src={arrow}
-            alt="&#8744;"
-            onClick={() => setIsActive((isActive = !isActive))}
-          />
+          <img src={arrow} alt="&#8744;" />
         )}
       </div>
       {isActive ? (

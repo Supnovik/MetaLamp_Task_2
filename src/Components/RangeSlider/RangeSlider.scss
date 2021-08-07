@@ -78,7 +78,8 @@
   display: inline-flex;
   width: 266px;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
+  margin-bottom: 20px;
   p {
     color: rgba(31, 32, 65, 0.5);
   }

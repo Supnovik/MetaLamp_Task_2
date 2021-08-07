@@ -1,10 +1,11 @@
-.exp-checkbox {
+.ExpandableCheckbox {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 320px;
+  cursor: pointer;
   img {
-    cursor: pointer;
+    padding-right: 15px;
   }
   .arrow {
     transform: rotateX(180deg);

@@ -15,6 +15,9 @@
     }
     .Navbar-buttons {
       display: flex;
+      @media (max-width: 1000px) {
+        display: none;
+      }
       align-items: center;
       a {
         margin: 10px;

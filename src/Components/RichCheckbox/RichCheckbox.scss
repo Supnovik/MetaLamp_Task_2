@@ -7,7 +7,7 @@
   }
   .checkbox + div {
     display: flex;
-    width: 300px;
+    width: 266px;
     margin: 5px 0 5px 0;
     user-select: none;
     font-size: 14px;
@@ -22,11 +22,14 @@
       font-size: 14px;
       line-height: 18px;
       text-transform: none;
-      opacity: 0.75;
+      color: rgba(31, 32, 65, 0.75);
       margin-bottom: 5px;
     }
     p {
-      opacity: 0.5;
+      width: 230px;
+      font-size: 12px;
+      line-height: 14px;
+      color: rgba(31, 32, 65, 0.5);
     }
   }
   .checkbox + div::before {

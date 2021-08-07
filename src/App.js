@@ -8,6 +8,7 @@ import HeadersFootes from "./Pages/HeadersFooters/HeadersFooters";
 import LandingPage from "./Pages/LandingPage/LandingPage";
 import RegistrationPage from "./Pages/RegistrationPage/RegistrationPage";
 import LoginPage from "./Pages/LoginPage/LoginPage";
+import SearchRoomPage from "./Pages/SearchRoomPage/SearchRoomPage";
 
 export default function App() {
   return (
@@ -26,6 +27,10 @@ export default function App() {
           component={RegistrationPage}
         />
         <Route path="/MetaLamp_Task_2/LoginPage" component={LoginPage} />
+        <Route
+          path="/MetaLamp_Task_2/SearchRoomPage"
+          component={SearchRoomPage}
+        />
       </Switch>
     </Router>
   );
@@ -55,6 +60,9 @@ function Home() {
         </li>
         <li>
           <Link to="/MetaLamp_Task_2/LoginPage">LoginPage</Link>
+        </li>
+        <li>
+          <Link to="/MetaLamp_Task_2/SearchRoomPage">SearchRoomPage</Link>
         </li>
       </ul>
     </div>

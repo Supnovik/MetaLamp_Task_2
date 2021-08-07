@@ -201,7 +201,7 @@ export default function UI() {
         </div>
 
         <div style={{ position: "absolute", left: "979px", top: "143px" }}>
-          <RangeSlider />
+          <RangeSlider text={"range slider"} />
         </div>
 
         <div style={{ position: "absolute", left: "979px", top: "231px" }}>

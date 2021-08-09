@@ -53,7 +53,7 @@ export default function RoomDetails() {
           </div>
           <div>
             <h2>Впечатления о номере</h2>
-            <Chart />
+            <Chart Great={130} Good={65} Satisfactory={65} Disappointed={0} />
           </div>
           <div className="reviews-block">
             <div className="reviews-title">

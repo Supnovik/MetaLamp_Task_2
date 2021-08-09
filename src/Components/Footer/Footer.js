@@ -11,6 +11,8 @@ import insta from "../../img/insta.svg";
 function Footer() {
   return (
     <div className="Footer">
+      <div className="Footer-outline" />
+
       <div className="description content-container">
         <div>
           <a href="/MetaLamp_Task_2/" className="company-name">

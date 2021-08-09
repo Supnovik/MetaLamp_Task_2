@@ -1,0 +1,52 @@
+.RoomDetails {
+  .RoomDetails-img {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-auto-rows: 244px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .img1 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+  }
+
+  .RoomDetails-info {
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    grid-column-gap: 70px;
+
+    .Specifications {
+      margin-top: 20px;
+    }
+    .reviews-block {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      .reviews-title {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .cancel {
+      p {
+        margin-top: 20px;
+      }
+    }
+    .Review,
+    .BulletList {
+      margin-top: 20px;
+    }
+  }
+  .RoomDetails-box2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 30px;
+  }
+}
